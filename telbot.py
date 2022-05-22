@@ -26,7 +26,7 @@ password = "".join(random.sample(use_for, pass_length))
 #help command 
 #Buttons
 @bot.message_handler(commands=['help'])
-def website(message):
+def buttons(message):
    markup = types.ReplyKeyboardMarkup() 
    website = types.KeyboardButton('/website')  #create button with /website command
    instagram = types.KeyboardButton('/instagram') #create button with /instagram command
@@ -46,7 +46,7 @@ def website(message):
 
 #command /instagram
 @bot.message_handler(commands=['instagram'])
-def website(message):
+def instagram(message):
    markup = types.InlineKeyboardMarkup()
    markup.add(types.InlineKeyboardButton('Посетить мой инстаграм', url = "https://www.instagram.com/aidynissa/")) #creating Inlinebutton with url
    bot.send_message(message.chat.id, "Перейти в инстаграм", reply_markup=markup) #bot sending message
