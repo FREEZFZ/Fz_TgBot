@@ -40,7 +40,7 @@ def buttons(message):
 @bot.message_handler(commands=['website'])
 def website(message):
    markup = types.InlineKeyboardMarkup()
-   markup.add(types.InlineKeyboardButton('Посетите мой веб-сайт', url = "http://freez.zzz.com.ua")) #creating Inlinebutton with url  
+   markup.add(types.InlineKeyboardButton('Посетите мой веб-сайт', url = "https://freezfz.github.io/")) #creating Inlinebutton with url  
    bot.send_message(message.chat.id, "Перейти на сайт", reply_markup=markup) #bot sending message
 #command /website end
 
